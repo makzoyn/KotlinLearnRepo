@@ -25,7 +25,6 @@ fun printMainMenu(isFirstStart: Boolean) {
     println("2. Гид по игре")
     println("3. Выйти из игры")
 }
-
 fun readItemMenu(): Int {
     println("Выберите пункт:")
     println()
@@ -42,13 +41,13 @@ fun readItemMenu(): Int {
 fun runGame() {
     val start = 0
     val end = 100
-    val randomNumber = (start..end).random()
+    val surprice = (start..end).random()
     do {
         println("Введите число:")
         val turn = readln().toInt()
-        if(turn > randomNumber)
+        if(turn > surprice)
             println("Загаданное число меньше")
-        else if(turn < randomNumber)
+        else if(turn < surprice)
             println("Загаданное число больше")
         else{
             print("Вы угадали число!")
